@@ -35,7 +35,7 @@ pub struct WebhookDeploymentProtectionRuleRequested {
     #[serde(rename = "installation", skip_serializing_if = "Option::is_none")]
     pub installation: Option<Box<models::SimpleInstallation>>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookDeploymentProtectionRuleRequested {

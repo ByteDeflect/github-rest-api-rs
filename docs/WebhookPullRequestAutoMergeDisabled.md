@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **pull_request** | [**models::PullRequest1**](Pull_Request_1.md) |  | 
 **reason** | **String** |  | 
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

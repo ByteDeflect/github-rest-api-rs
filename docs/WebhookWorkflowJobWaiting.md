@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **installation** | Option<[**models::SimpleInstallation**](simple-installation.md)> |  | [optional]
 **organization** | Option<[**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md)> |  | [optional]
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 **workflow_job** | [**models::WebhookWorkflowJobWaitingWorkflowJob**](webhook_workflow_job_waiting_workflow_job.md) |  | 
 **deployment** | Option<[**models::Deployment**](deployment.md)> |  | [optional]
 

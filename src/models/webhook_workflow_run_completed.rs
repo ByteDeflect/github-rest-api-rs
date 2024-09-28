@@ -24,7 +24,7 @@ pub struct WebhookWorkflowRunCompleted {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "workflow", deserialize_with = "Option::deserialize")]
     pub workflow: Option<Box<models::WebhooksWorkflow>>,
     #[serde(rename = "workflow_run")]
@@ -32,7 +32,7 @@ pub struct WebhookWorkflowRunCompleted {
 }
 
 impl WebhookWorkflowRunCompleted {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, workflow: Option<models::WebhooksWorkflow>, workflow_run: models::WorkflowRun) -> WebhookWorkflowRunCompleted {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser, workflow: Option<models::WebhooksWorkflow>, workflow_run: models::WorkflowRun) -> WebhookWorkflowRunCompleted {
         WebhookWorkflowRunCompleted {
             action,
             enterprise: None,

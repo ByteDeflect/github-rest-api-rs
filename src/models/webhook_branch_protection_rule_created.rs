@@ -26,11 +26,11 @@ pub struct WebhookBranchProtectionRuleCreated {
     #[serde(rename = "rule")]
     pub rule: Box<models::WebhooksRule>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookBranchProtectionRuleCreated {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, rule: models::WebhooksRule, sender: models::SimpleUserWebhooks) -> WebhookBranchProtectionRuleCreated {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, rule: models::WebhooksRule, sender: models::SimpleUser) -> WebhookBranchProtectionRuleCreated {
         WebhookBranchProtectionRuleCreated {
             action,
             enterprise: None,

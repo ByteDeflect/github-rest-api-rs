@@ -28,11 +28,11 @@ pub struct WebhookIssueCommentCreated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookIssueCommentCreated {
-    pub fn new(action: Action, comment: models::IssueComment, issue: models::WebhookIssueCommentCreatedIssue, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookIssueCommentCreated {
+    pub fn new(action: Action, comment: models::IssueComment, issue: models::WebhookIssueCommentCreatedIssue, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookIssueCommentCreated {
         WebhookIssueCommentCreated {
             action,
             comment: Box::new(comment),

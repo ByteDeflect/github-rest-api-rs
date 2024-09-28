@@ -26,11 +26,11 @@ pub struct WebhookDiscussionUnlocked {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookDiscussionUnlocked {
-    pub fn new(action: Action, discussion: models::Discussion, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookDiscussionUnlocked {
+    pub fn new(action: Action, discussion: models::Discussion, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookDiscussionUnlocked {
         WebhookDiscussionUnlocked {
             action,
             discussion: Box::new(discussion),

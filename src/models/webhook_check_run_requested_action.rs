@@ -26,11 +26,11 @@ pub struct WebhookCheckRunRequestedAction {
     #[serde(rename = "requested_action", skip_serializing_if = "Option::is_none")]
     pub requested_action: Option<Box<models::WebhookCheckRunRequestedActionRequestedAction>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookCheckRunRequestedAction {
-    pub fn new(action: Action, check_run: models::CheckRunWithSimpleCheckSuite, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookCheckRunRequestedAction {
+    pub fn new(action: Action, check_run: models::CheckRunWithSimpleCheckSuite, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookCheckRunRequestedAction {
         WebhookCheckRunRequestedAction {
             action,
             check_run: Box::new(check_run),

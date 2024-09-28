@@ -1002,7 +1002,7 @@ pub async fn pulls_slash_update(configuration: &configuration::Configuration, ow
     }
 }
 
-/// Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
+/// Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch. Note: If making a request on behalf of a GitHub App you must also have permissions to write the contents of the head repository.
 pub async fn pulls_slash_update_branch(configuration: &configuration::Configuration, owner: &str, repo: &str, pull_number: i32, pulls_update_branch_request: Option<models::PullsUpdateBranchRequest>) -> Result<models::ActivityMarkRepoNotificationsAsRead202Response, Error<PullsSlashUpdateBranchError>> {
     let local_var_configuration = configuration;
 

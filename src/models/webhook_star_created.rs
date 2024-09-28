@@ -24,14 +24,14 @@ pub struct WebhookStarCreated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     /// The time the star was created. This is a timestamp in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. Will be `null` for the `deleted` action.
     #[serde(rename = "starred_at", deserialize_with = "Option::deserialize")]
     pub starred_at: Option<String>,
 }
 
 impl WebhookStarCreated {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, starred_at: Option<String>) -> WebhookStarCreated {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser, starred_at: Option<String>) -> WebhookStarCreated {
         WebhookStarCreated {
             action,
             enterprise: None,

@@ -22,11 +22,11 @@ pub struct WebhookPublic {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPublic {
-    pub fn new(repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPublic {
+    pub fn new(repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPublic {
         WebhookPublic {
             enterprise: None,
             installation: None,

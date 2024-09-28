@@ -28,11 +28,11 @@ pub struct WebhookDiscussionCategoryChanged {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookDiscussionCategoryChanged {
-    pub fn new(action: Action, changes: models::WebhookDiscussionCategoryChangedChanges, discussion: models::Discussion, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookDiscussionCategoryChanged {
+    pub fn new(action: Action, changes: models::WebhookDiscussionCategoryChangedChanges, discussion: models::Discussion, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookDiscussionCategoryChanged {
         WebhookDiscussionCategoryChanged {
             action,
             changes: Box::new(changes),

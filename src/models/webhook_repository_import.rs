@@ -22,13 +22,13 @@ pub struct WebhookRepositoryImport {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "status")]
     pub status: Status,
 }
 
 impl WebhookRepositoryImport {
-    pub fn new(repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, status: Status) -> WebhookRepositoryImport {
+    pub fn new(repository: models::RepositoryWebhooks, sender: models::SimpleUser, status: Status) -> WebhookRepositoryImport {
         WebhookRepositoryImport {
             enterprise: None,
             installation: None,

@@ -26,7 +26,7 @@ pub struct WebhookProjectDeleted {
     #[serde(rename = "repository", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Option<Box<models::NullableRepositoryWebhooks>>>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookProjectDeleted {

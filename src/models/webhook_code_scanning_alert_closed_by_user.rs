@@ -32,11 +32,11 @@ pub struct WebhookCodeScanningAlertClosedByUser {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookCodeScanningAlertClosedByUser {
-    pub fn new(action: Action, alert: models::WebhookCodeScanningAlertClosedByUserAlert, commit_oid: String, r#ref: String, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookCodeScanningAlertClosedByUser {
+    pub fn new(action: Action, alert: models::WebhookCodeScanningAlertClosedByUserAlert, commit_oid: String, r#ref: String, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookCodeScanningAlertClosedByUser {
         WebhookCodeScanningAlertClosedByUser {
             action,
             alert: Box::new(alert),

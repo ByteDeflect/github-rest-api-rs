@@ -22,11 +22,11 @@ pub struct WebhookProjectsV2ProjectReopened {
     #[serde(rename = "projects_v2")]
     pub projects_v2: Box<models::ProjectsV2>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookProjectsV2ProjectReopened {
-    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, projects_v2: models::ProjectsV2, sender: models::SimpleUserWebhooks) -> WebhookProjectsV2ProjectReopened {
+    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, projects_v2: models::ProjectsV2, sender: models::SimpleUser) -> WebhookProjectsV2ProjectReopened {
         WebhookProjectsV2ProjectReopened {
             action,
             installation: None,

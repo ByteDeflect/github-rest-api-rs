@@ -22,13 +22,13 @@ pub struct WebhookPersonalAccessTokenRequestCreated {
     #[serde(rename = "organization")]
     pub organization: Box<models::OrganizationSimpleWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "installation", skip_serializing_if = "Option::is_none")]
     pub installation: Option<Box<models::SimpleInstallation>>,
 }
 
 impl WebhookPersonalAccessTokenRequestCreated {
-    pub fn new(action: Action, personal_access_token_request: models::PersonalAccessTokenRequest, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPersonalAccessTokenRequestCreated {
+    pub fn new(action: Action, personal_access_token_request: models::PersonalAccessTokenRequest, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUser) -> WebhookPersonalAccessTokenRequestCreated {
         WebhookPersonalAccessTokenRequestCreated {
             action,
             personal_access_token_request: Box::new(personal_access_token_request),

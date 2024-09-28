@@ -26,13 +26,13 @@ pub struct WebhookOrganizationMemberInvited {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "user", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub user: Option<Option<Box<models::WebhooksUser>>>,
 }
 
 impl WebhookOrganizationMemberInvited {
-    pub fn new(action: Action, invitation: models::WebhookOrganizationMemberInvitedInvitation, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUserWebhooks) -> WebhookOrganizationMemberInvited {
+    pub fn new(action: Action, invitation: models::WebhookOrganizationMemberInvitedInvitation, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUser) -> WebhookOrganizationMemberInvited {
         WebhookOrganizationMemberInvited {
             action,
             enterprise: None,

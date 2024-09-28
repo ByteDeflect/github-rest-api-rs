@@ -29,11 +29,11 @@ pub struct WebhookPullRequestConvertedToDraft {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestConvertedToDraft {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequestWebhook, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestConvertedToDraft {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequestWebhook, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestConvertedToDraft {
         WebhookPullRequestConvertedToDraft {
             action,
             enterprise: None,

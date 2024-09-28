@@ -30,7 +30,7 @@ pub struct WebhookDeploymentReviewRequested {
     #[serde(rename = "reviewers")]
     pub reviewers: Vec<models::WebhookDeploymentReviewRequestedReviewersInner>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "since")]
     pub since: String,
     #[serde(rename = "workflow_job_run")]
@@ -40,7 +40,7 @@ pub struct WebhookDeploymentReviewRequested {
 }
 
 impl WebhookDeploymentReviewRequested {
-    pub fn new(action: Action, environment: String, organization: models::OrganizationSimpleWebhooks, repository: models::RepositoryWebhooks, requestor: Option<models::WebhooksUser>, reviewers: Vec<models::WebhookDeploymentReviewRequestedReviewersInner>, sender: models::SimpleUserWebhooks, since: String, workflow_job_run: models::WebhookDeploymentReviewRequestedWorkflowJobRun, workflow_run: Option<models::DeploymentWorkflowRun3>) -> WebhookDeploymentReviewRequested {
+    pub fn new(action: Action, environment: String, organization: models::OrganizationSimpleWebhooks, repository: models::RepositoryWebhooks, requestor: Option<models::WebhooksUser>, reviewers: Vec<models::WebhookDeploymentReviewRequestedReviewersInner>, sender: models::SimpleUser, since: String, workflow_job_run: models::WebhookDeploymentReviewRequestedWorkflowJobRun, workflow_run: Option<models::DeploymentWorkflowRun3>) -> WebhookDeploymentReviewRequested {
         WebhookDeploymentReviewRequested {
             action,
             enterprise: None,

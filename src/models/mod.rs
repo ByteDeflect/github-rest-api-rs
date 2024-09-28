@@ -2128,8 +2128,6 @@ pub mod simple_repository;
 pub use self::simple_repository::SimpleRepository;
 pub mod simple_user;
 pub use self::simple_user::SimpleUser;
-pub mod simple_user_webhooks;
-pub use self::simple_user_webhooks::SimpleUserWebhooks;
 pub mod snapshot;
 pub use self::snapshot::Snapshot;
 pub mod snapshot_detector;

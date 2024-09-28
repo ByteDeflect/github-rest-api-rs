@@ -29,13 +29,13 @@ pub struct WebhookSponsorshipPendingTierChange {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "sponsorship")]
     pub sponsorship: Box<models::WebhooksSponsorship>,
 }
 
 impl WebhookSponsorshipPendingTierChange {
-    pub fn new(action: Action, changes: models::WebhooksChanges8, sender: models::SimpleUserWebhooks, sponsorship: models::WebhooksSponsorship) -> WebhookSponsorshipPendingTierChange {
+    pub fn new(action: Action, changes: models::WebhooksChanges8, sender: models::SimpleUser, sponsorship: models::WebhooksSponsorship) -> WebhookSponsorshipPendingTierChange {
         WebhookSponsorshipPendingTierChange {
             action,
             changes: Box::new(changes),

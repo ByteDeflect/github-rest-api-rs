@@ -33,11 +33,11 @@ pub struct WebhookPullRequestSynchronize {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestSynchronize {
-    pub fn new(action: Action, after: String, before: String, number: i32, pull_request: models::PullRequest10, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestSynchronize {
+    pub fn new(action: Action, after: String, before: String, number: i32, pull_request: models::PullRequest10, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestSynchronize {
         WebhookPullRequestSynchronize {
             action,
             after,

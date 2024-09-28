@@ -24,11 +24,11 @@ pub struct WebhookRepositoryPrivatized {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookRepositoryPrivatized {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookRepositoryPrivatized {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookRepositoryPrivatized {
         WebhookRepositoryPrivatized {
             action,
             enterprise: None,

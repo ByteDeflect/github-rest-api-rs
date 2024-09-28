@@ -30,11 +30,11 @@ pub struct WebhookPullRequestReviewEdited {
     #[serde(rename = "review")]
     pub review: Box<models::WebhooksReview>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestReviewEdited {
-    pub fn new(action: Action, changes: models::WebhookPullRequestReviewEditedChanges, pull_request: models::SimplePullRequest1, repository: models::RepositoryWebhooks, review: models::WebhooksReview, sender: models::SimpleUserWebhooks) -> WebhookPullRequestReviewEdited {
+    pub fn new(action: Action, changes: models::WebhookPullRequestReviewEditedChanges, pull_request: models::SimplePullRequest1, repository: models::RepositoryWebhooks, review: models::WebhooksReview, sender: models::SimpleUser) -> WebhookPullRequestReviewEdited {
         WebhookPullRequestReviewEdited {
             action,
             changes: Box::new(changes),

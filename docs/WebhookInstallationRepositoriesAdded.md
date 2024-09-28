@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **repository** | Option<[**models::RepositoryWebhooks**](repository-webhooks.md)> |  | [optional]
 **repository_selection** | [**models::WebhooksRepositorySelection**](webhooks_repository_selection.md) |  | 
 **requester** | Option<[**models::WebhooksUser**](webhooks_user.md)> |  | 
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

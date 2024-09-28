@@ -26,11 +26,11 @@ pub struct WebhookMilestoneCreated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookMilestoneCreated {
-    pub fn new(action: Action, milestone: models::WebhooksMilestone3, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookMilestoneCreated {
+    pub fn new(action: Action, milestone: models::WebhooksMilestone3, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookMilestoneCreated {
         WebhookMilestoneCreated {
             action,
             enterprise: None,

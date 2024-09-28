@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **organization** | Option<[**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md)> |  | [optional]
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 **sha** | **String** | The Commit SHA. | 
 **state** | **String** | The new state. Can be `pending`, `success`, `failure`, or `error`. | 
 **target_url** | Option<**String**> | The optional link added to the status. | 

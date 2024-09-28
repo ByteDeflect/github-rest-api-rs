@@ -34,7 +34,7 @@ pub struct WebhookSubIssuesSubIssueRemoved {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookSubIssuesSubIssueRemoved {

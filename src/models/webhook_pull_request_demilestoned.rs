@@ -29,7 +29,7 @@ pub struct WebhookPullRequestDemilestoned {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookPullRequestDemilestoned {

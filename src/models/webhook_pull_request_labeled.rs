@@ -31,11 +31,11 @@ pub struct WebhookPullRequestLabeled {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestLabeled {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequest4, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestLabeled {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequest4, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestLabeled {
         WebhookPullRequestLabeled {
             action,
             enterprise: None,

@@ -24,7 +24,7 @@ pub struct WebhookCustomPropertyUpdated {
     #[serde(rename = "organization", skip_serializing_if = "Option::is_none")]
     pub organization: Option<Box<models::OrganizationSimpleWebhooks>>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookCustomPropertyUpdated {

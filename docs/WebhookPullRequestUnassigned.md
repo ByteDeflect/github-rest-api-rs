@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **organization** | Option<[**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md)> |  | [optional]
 **pull_request** | [**models::PullRequest11**](Pull_Request_11.md) |  | 
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
-**sender** | Option<[**models::SimpleUserWebhooks**](simple-user-webhooks.md)> |  | [optional]
+**sender** | Option<[**models::SimpleUser**](simple-user.md)> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

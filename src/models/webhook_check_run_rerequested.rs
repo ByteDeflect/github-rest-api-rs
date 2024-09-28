@@ -24,11 +24,11 @@ pub struct WebhookCheckRunRerequested {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookCheckRunRerequested {
-    pub fn new(check_run: models::CheckRunWithSimpleCheckSuite, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookCheckRunRerequested {
+    pub fn new(check_run: models::CheckRunWithSimpleCheckSuite, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookCheckRunRerequested {
         WebhookCheckRunRerequested {
             action: None,
             check_run: Box::new(check_run),

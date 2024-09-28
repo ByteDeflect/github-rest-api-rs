@@ -24,7 +24,7 @@ pub struct WebhookTeamDeleted {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::Repository15>>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
     #[serde(rename = "team")]
     pub team: Box<models::WebhooksTeam1>,
 }

@@ -30,11 +30,11 @@ pub struct WebhookPullRequestAutoMergeEnabled {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestAutoMergeEnabled {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequest2, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestAutoMergeEnabled {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequest2, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestAutoMergeEnabled {
         WebhookPullRequestAutoMergeEnabled {
             action,
             enterprise: None,

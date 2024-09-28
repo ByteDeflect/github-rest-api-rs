@@ -26,11 +26,11 @@ pub struct WebhookDependabotAlertAutoReopened {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookDependabotAlertAutoReopened {
-    pub fn new(action: Action, alert: models::DependabotAlert, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookDependabotAlertAutoReopened {
+    pub fn new(action: Action, alert: models::DependabotAlert, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookDependabotAlertAutoReopened {
         WebhookDependabotAlertAutoReopened {
             action,
             alert: Box::new(alert),

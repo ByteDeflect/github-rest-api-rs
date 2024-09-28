@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **r#ref** | **String** | The [`git ref`](https://docs.github.com/rest/git/refs#get-a-reference) resource. | 
 **ref_type** | **String** | The type of Git ref object deleted in the repository. | 
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

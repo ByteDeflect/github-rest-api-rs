@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **pull_request** | [**models::PullRequest9**](Pull_Request_9.md) |  | 
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
 **requested_team** | [**models::Team**](Team.md) |  | 
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

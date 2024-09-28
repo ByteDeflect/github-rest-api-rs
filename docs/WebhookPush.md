@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **pusher** | [**models::Committer1**](Committer_1.md) |  | 
 **r#ref** | **String** | The full git ref that was pushed. Example: `refs/heads/main` or `refs/tags/v3.14.1`. | 
 **repository** | [**models::Repository2**](Repository_2.md) |  | 
-**sender** | Option<[**models::SimpleUserWebhooks**](simple-user-webhooks.md)> |  | [optional]
+**sender** | Option<[**models::SimpleUser**](simple-user.md)> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,11 +24,11 @@ pub struct WebhookRepositoryDeleted {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookRepositoryDeleted {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookRepositoryDeleted {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookRepositoryDeleted {
         WebhookRepositoryDeleted {
             action,
             enterprise: None,

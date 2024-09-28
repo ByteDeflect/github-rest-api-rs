@@ -16,11 +16,11 @@ pub struct WebhookGithubAppAuthorizationRevoked {
     #[serde(rename = "action")]
     pub action: Action,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookGithubAppAuthorizationRevoked {
-    pub fn new(action: Action, sender: models::SimpleUserWebhooks) -> WebhookGithubAppAuthorizationRevoked {
+    pub fn new(action: Action, sender: models::SimpleUser) -> WebhookGithubAppAuthorizationRevoked {
         WebhookGithubAppAuthorizationRevoked {
             action,
             sender: Box::new(sender),

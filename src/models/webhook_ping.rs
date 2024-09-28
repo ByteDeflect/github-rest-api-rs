@@ -23,7 +23,7 @@ pub struct WebhookPing {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
     /// Random string of GitHub zen.
     #[serde(rename = "zen", skip_serializing_if = "Option::is_none")]
     pub zen: Option<String>,

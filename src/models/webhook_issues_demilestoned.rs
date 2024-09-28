@@ -28,11 +28,11 @@ pub struct WebhookIssuesDemilestoned {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookIssuesDemilestoned {
-    pub fn new(action: Action, issue: models::Issue1, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookIssuesDemilestoned {
+    pub fn new(action: Action, issue: models::Issue1, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookIssuesDemilestoned {
         WebhookIssuesDemilestoned {
             action,
             enterprise: None,

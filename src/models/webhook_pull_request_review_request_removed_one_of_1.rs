@@ -31,11 +31,11 @@ pub struct WebhookPullRequestReviewRequestRemovedOneOf1 {
     #[serde(rename = "requested_team")]
     pub requested_team: Box<models::Team1>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestReviewRequestRemovedOneOf1 {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequest7, repository: models::RepositoryWebhooks, requested_team: models::Team1, sender: models::SimpleUserWebhooks) -> WebhookPullRequestReviewRequestRemovedOneOf1 {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequest7, repository: models::RepositoryWebhooks, requested_team: models::Team1, sender: models::SimpleUser) -> WebhookPullRequestReviewRequestRemovedOneOf1 {
         WebhookPullRequestReviewRequestRemovedOneOf1 {
             action,
             enterprise: None,

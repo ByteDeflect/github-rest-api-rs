@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **organization** | Option<[**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md)> |  | [optional]
 **previous_marketplace_purchase** | Option<[**models::WebhooksPreviousMarketplacePurchase**](webhooks_previous_marketplace_purchase.md)> |  | [optional]
 **repository** | Option<[**models::RepositoryWebhooks**](repository-webhooks.md)> |  | [optional]
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

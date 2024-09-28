@@ -22,13 +22,13 @@ pub struct WebhookTeamAdd {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "team")]
     pub team: Box<models::WebhooksTeam1>,
 }
 
 impl WebhookTeamAdd {
-    pub fn new(repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, team: models::WebhooksTeam1) -> WebhookTeamAdd {
+    pub fn new(repository: models::RepositoryWebhooks, sender: models::SimpleUser, team: models::WebhooksTeam1) -> WebhookTeamAdd {
         WebhookTeamAdd {
             enterprise: None,
             installation: None,

@@ -28,11 +28,11 @@ pub struct WebhookIssuesUnlabeled {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookIssuesUnlabeled {
-    pub fn new(action: Action, issue: models::WebhooksIssue, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookIssuesUnlabeled {
+    pub fn new(action: Action, issue: models::WebhooksIssue, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookIssuesUnlabeled {
         WebhookIssuesUnlabeled {
             action,
             enterprise: None,

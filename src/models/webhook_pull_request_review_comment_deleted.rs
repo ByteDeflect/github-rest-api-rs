@@ -28,11 +28,11 @@ pub struct WebhookPullRequestReviewCommentDeleted {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestReviewCommentDeleted {
-    pub fn new(action: Action, comment: models::WebhooksReviewComment, pull_request: models::WebhookPullRequestReviewCommentDeletedPullRequest, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestReviewCommentDeleted {
+    pub fn new(action: Action, comment: models::WebhooksReviewComment, pull_request: models::WebhookPullRequestReviewCommentDeletedPullRequest, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestReviewCommentDeleted {
         WebhookPullRequestReviewCommentDeleted {
             action,
             comment: Box::new(comment),

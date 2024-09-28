@@ -29,11 +29,11 @@ pub struct WebhookInstallationUnsuspend {
     #[serde(rename = "requester", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub requester: Option<Option<serde_json::Value>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookInstallationUnsuspend {
-    pub fn new(action: Action, installation: models::Installation, sender: models::SimpleUserWebhooks) -> WebhookInstallationUnsuspend {
+    pub fn new(action: Action, installation: models::Installation, sender: models::SimpleUser) -> WebhookInstallationUnsuspend {
         WebhookInstallationUnsuspend {
             action,
             enterprise: None,

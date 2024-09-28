@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **repository** | Option<[**models::RepositoryWebhooks**](repository-webhooks.md)> |  | [optional]
 **repository_ruleset** | [**models::RepositoryRuleset**](repository-ruleset.md) |  | 
 **changes** | Option<[**models::WebhookRepositoryRulesetEditedChanges**](webhook_repository_ruleset_edited_changes.md)> |  | [optional]
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

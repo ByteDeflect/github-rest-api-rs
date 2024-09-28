@@ -30,11 +30,11 @@ pub struct WebhookMarketplacePurchaseCancelled {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookMarketplacePurchaseCancelled {
-    pub fn new(action: Action, effective_date: String, marketplace_purchase: models::WebhooksMarketplacePurchase, sender: models::SimpleUserWebhooks) -> WebhookMarketplacePurchaseCancelled {
+    pub fn new(action: Action, effective_date: String, marketplace_purchase: models::WebhooksMarketplacePurchase, sender: models::SimpleUser) -> WebhookMarketplacePurchaseCancelled {
         WebhookMarketplacePurchaseCancelled {
             action,
             effective_date,

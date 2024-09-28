@@ -29,11 +29,11 @@ pub struct WebhookIssuesUnassigned {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookIssuesUnassigned {
-    pub fn new(action: Action, issue: models::WebhooksIssue, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookIssuesUnassigned {
+    pub fn new(action: Action, issue: models::WebhooksIssue, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookIssuesUnassigned {
         WebhookIssuesUnassigned {
             action,
             assignee: None,

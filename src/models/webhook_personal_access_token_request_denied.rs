@@ -22,13 +22,13 @@ pub struct WebhookPersonalAccessTokenRequestDenied {
     #[serde(rename = "enterprise", skip_serializing_if = "Option::is_none")]
     pub enterprise: Option<Box<models::EnterpriseWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "installation")]
     pub installation: Box<models::SimpleInstallation>,
 }
 
 impl WebhookPersonalAccessTokenRequestDenied {
-    pub fn new(action: Action, personal_access_token_request: models::PersonalAccessTokenRequest, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUserWebhooks, installation: models::SimpleInstallation) -> WebhookPersonalAccessTokenRequestDenied {
+    pub fn new(action: Action, personal_access_token_request: models::PersonalAccessTokenRequest, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUser, installation: models::SimpleInstallation) -> WebhookPersonalAccessTokenRequestDenied {
         WebhookPersonalAccessTokenRequestDenied {
             action,
             personal_access_token_request: Box::new(personal_access_token_request),

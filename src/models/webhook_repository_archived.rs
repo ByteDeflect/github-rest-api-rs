@@ -24,11 +24,11 @@ pub struct WebhookRepositoryArchived {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookRepositoryArchived {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookRepositoryArchived {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookRepositoryArchived {
         WebhookRepositoryArchived {
             action,
             enterprise: None,

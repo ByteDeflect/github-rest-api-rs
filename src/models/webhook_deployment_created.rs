@@ -26,7 +26,7 @@ pub struct WebhookDeploymentCreated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "workflow", deserialize_with = "Option::deserialize")]
     pub workflow: Option<Box<models::WebhooksWorkflow>>,
     #[serde(rename = "workflow_run", deserialize_with = "Option::deserialize")]
@@ -34,7 +34,7 @@ pub struct WebhookDeploymentCreated {
 }
 
 impl WebhookDeploymentCreated {
-    pub fn new(action: Action, deployment: models::Deployment, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, workflow: Option<models::WebhooksWorkflow>, workflow_run: Option<models::DeploymentWorkflowRun>) -> WebhookDeploymentCreated {
+    pub fn new(action: Action, deployment: models::Deployment, repository: models::RepositoryWebhooks, sender: models::SimpleUser, workflow: Option<models::WebhooksWorkflow>, workflow_run: Option<models::DeploymentWorkflowRun>) -> WebhookDeploymentCreated {
         WebhookDeploymentCreated {
             action,
             deployment: Box::new(deployment),

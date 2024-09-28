@@ -31,11 +31,11 @@ pub struct WebhookPullRequestAssigned {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestAssigned {
-    pub fn new(action: Action, assignee: Option<models::WebhooksUser>, number: i32, pull_request: models::PullRequest, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestAssigned {
+    pub fn new(action: Action, assignee: Option<models::WebhooksUser>, number: i32, pull_request: models::PullRequest, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestAssigned {
         WebhookPullRequestAssigned {
             action,
             assignee: if let Some(x) = assignee {Some(Box::new(x))} else {None},

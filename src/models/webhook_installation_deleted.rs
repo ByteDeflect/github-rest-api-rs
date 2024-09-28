@@ -29,11 +29,11 @@ pub struct WebhookInstallationDeleted {
     #[serde(rename = "requester", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub requester: Option<Option<serde_json::Value>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookInstallationDeleted {
-    pub fn new(action: Action, installation: models::Installation, sender: models::SimpleUserWebhooks) -> WebhookInstallationDeleted {
+    pub fn new(action: Action, installation: models::Installation, sender: models::SimpleUser) -> WebhookInstallationDeleted {
         WebhookInstallationDeleted {
             action,
             enterprise: None,

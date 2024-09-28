@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **size** | **i32** |  | 
 **name** | **String** |  | 
 **path** | **String** |  | 
-**content** | Option<**String**> |  | [optional]
 **sha** | **String** |  | 
 **url** | **String** |  | 
 **git_url** | Option<**String**> |  | 

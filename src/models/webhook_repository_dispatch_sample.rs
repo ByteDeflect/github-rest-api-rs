@@ -30,11 +30,11 @@ pub struct WebhookRepositoryDispatchSample {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookRepositoryDispatchSample {
-    pub fn new(action: String, branch: String, client_payload: Option<std::collections::HashMap<String, serde_json::Value>>, installation: models::SimpleInstallation, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookRepositoryDispatchSample {
+    pub fn new(action: String, branch: String, client_payload: Option<std::collections::HashMap<String, serde_json::Value>>, installation: models::SimpleInstallation, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookRepositoryDispatchSample {
         WebhookRepositoryDispatchSample {
             action,
             branch,

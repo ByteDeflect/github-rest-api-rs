@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **installation** | Option<[**models::SimpleInstallation**](simple-installation.md)> |  | [optional]
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
 **organization** | [**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md) |  | 
-**sender** | Option<[**models::SimpleUserWebhooks**](simple-user-webhooks.md)> |  | [optional]
+**sender** | Option<[**models::SimpleUser**](simple-user.md)> |  | [optional]
 **new_property_values** | [**Vec<models::CustomPropertyValue>**](custom-property-value.md) | The new custom property values for the repository. | 
 **old_property_values** | [**Vec<models::CustomPropertyValue>**](custom-property-value.md) | The old custom property values for the repository. | 
 

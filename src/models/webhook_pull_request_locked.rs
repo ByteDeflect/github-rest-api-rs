@@ -29,11 +29,11 @@ pub struct WebhookPullRequestLocked {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestLocked {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequest5, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestLocked {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequest5, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestLocked {
         WebhookPullRequestLocked {
             action,
             enterprise: None,

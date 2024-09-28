@@ -26,11 +26,11 @@ pub struct WebhookPackageUpdated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPackageUpdated {
-    pub fn new(action: Action, package: models::WebhookPackageUpdatedPackage, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPackageUpdated {
+    pub fn new(action: Action, package: models::WebhookPackageUpdatedPackage, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPackageUpdated {
         WebhookPackageUpdated {
             action,
             enterprise: None,

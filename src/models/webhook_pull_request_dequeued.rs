@@ -26,15 +26,15 @@ pub struct WebhookPullRequestDequeued {
     #[serde(rename = "pull_request")]
     pub pull_request: Box<models::PullRequest3>,
     #[serde(rename = "reason")]
-    pub reason: String,
+    pub reason: Reason,
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestDequeued {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequest3, reason: String, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPullRequestDequeued {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequest3, reason: Reason, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPullRequestDequeued {
         WebhookPullRequestDequeued {
             action,
             enterprise: None,
@@ -58,6 +58,40 @@ pub enum Action {
 impl Default for Action {
     fn default() -> Action {
         Self::Dequeued
+    }
+}
+/// 
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
+pub enum Reason {
+    #[serde(rename = "UNKNOWN_REMOVAL_REASON")]
+    UnknownRemovalReason,
+    #[serde(rename = "MANUAL")]
+    Manual,
+    #[serde(rename = "MERGE")]
+    Merge,
+    #[serde(rename = "MERGE_CONFLICT")]
+    MergeConflict,
+    #[serde(rename = "CI_FAILURE")]
+    CiFailure,
+    #[serde(rename = "CI_TIMEOUT")]
+    CiTimeout,
+    #[serde(rename = "ALREADY_MERGED")]
+    AlreadyMerged,
+    #[serde(rename = "QUEUE_CLEARED")]
+    QueueCleared,
+    #[serde(rename = "ROLL_BACK")]
+    RollBack,
+    #[serde(rename = "BRANCH_PROTECTIONS")]
+    BranchProtections,
+    #[serde(rename = "GIT_TREE_INVALID")]
+    GitTreeInvalid,
+    #[serde(rename = "INVALID_MERGE_COMMIT")]
+    InvalidMergeCommit,
+}
+
+impl Default for Reason {
+    fn default() -> Reason {
+        Self::UnknownRemovalReason
     }
 }
 

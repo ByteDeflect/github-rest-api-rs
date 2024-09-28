@@ -26,11 +26,11 @@ pub struct WebhookCheckSuiteRerequested {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookCheckSuiteRerequested {
-    pub fn new(action: Action, check_suite: models::WebhookCheckSuiteRerequestedCheckSuite, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookCheckSuiteRerequested {
+    pub fn new(action: Action, check_suite: models::WebhookCheckSuiteRerequestedCheckSuite, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookCheckSuiteRerequested {
         WebhookCheckSuiteRerequested {
             action,
             check_suite: Box::new(check_suite),

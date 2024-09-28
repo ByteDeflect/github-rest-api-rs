@@ -52,7 +52,7 @@ pub struct WebhookPush {
     #[serde(rename = "repository")]
     pub repository: Box<models::Repository2>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookPush {

@@ -31,11 +31,11 @@ pub struct WebhookPullRequestReviewRequestRemovedOneOf {
     #[serde(rename = "requested_reviewer", deserialize_with = "Option::deserialize")]
     pub requested_reviewer: Option<Box<models::User>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPullRequestReviewRequestRemovedOneOf {
-    pub fn new(action: Action, number: i32, pull_request: models::PullRequest6, repository: models::RepositoryWebhooks, requested_reviewer: Option<models::User>, sender: models::SimpleUserWebhooks) -> WebhookPullRequestReviewRequestRemovedOneOf {
+    pub fn new(action: Action, number: i32, pull_request: models::PullRequest6, repository: models::RepositoryWebhooks, requested_reviewer: Option<models::User>, sender: models::SimpleUser) -> WebhookPullRequestReviewRequestRemovedOneOf {
         WebhookPullRequestReviewRequestRemovedOneOf {
             action,
             enterprise: None,

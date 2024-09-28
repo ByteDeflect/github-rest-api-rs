@@ -26,7 +26,7 @@ pub struct WebhookRepositoryAdvisoryReported {
     #[serde(rename = "repository_advisory")]
     pub repository_advisory: Box<models::RepositoryAdvisory>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookRepositoryAdvisoryReported {

@@ -26,11 +26,11 @@ pub struct WebhookProjectColumnMoved {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookProjectColumnMoved {
-    pub fn new(action: Action, project_column: models::WebhooksProjectColumn, sender: models::SimpleUserWebhooks) -> WebhookProjectColumnMoved {
+    pub fn new(action: Action, project_column: models::WebhooksProjectColumn, sender: models::SimpleUser) -> WebhookProjectColumnMoved {
         WebhookProjectColumnMoved {
             action,
             enterprise: None,

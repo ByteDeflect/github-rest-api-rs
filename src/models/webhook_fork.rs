@@ -25,12 +25,12 @@ pub struct WebhookFork {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookFork {
     /// A user forks a repository.
-    pub fn new(forkee: models::WebhookForkForkee, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookFork {
+    pub fn new(forkee: models::WebhookForkForkee, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookFork {
         WebhookFork {
             enterprise: None,
             forkee: Box::new(forkee),

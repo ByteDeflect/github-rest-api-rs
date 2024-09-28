@@ -24,13 +24,13 @@ pub struct WebhookTeamCreated {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::Repository15>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "team")]
     pub team: Box<models::WebhooksTeam1>,
 }
 
 impl WebhookTeamCreated {
-    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUserWebhooks, team: models::WebhooksTeam1) -> WebhookTeamCreated {
+    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUser, team: models::WebhooksTeam1) -> WebhookTeamCreated {
         WebhookTeamCreated {
             action,
             enterprise: None,

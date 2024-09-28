@@ -31,11 +31,11 @@ pub struct WebhookDelete {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookDelete {
-    pub fn new(pusher_type: String, r#ref: String, ref_type: RefType, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookDelete {
+    pub fn new(pusher_type: String, r#ref: String, ref_type: RefType, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookDelete {
         WebhookDelete {
             enterprise: None,
             installation: None,

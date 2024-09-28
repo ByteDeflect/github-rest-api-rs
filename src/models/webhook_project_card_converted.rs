@@ -28,11 +28,11 @@ pub struct WebhookProjectCardConverted {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookProjectCardConverted {
-    pub fn new(action: Action, changes: models::WebhookProjectCardConvertedChanges, project_card: models::WebhooksProjectCard, sender: models::SimpleUserWebhooks) -> WebhookProjectCardConverted {
+    pub fn new(action: Action, changes: models::WebhookProjectCardConvertedChanges, project_card: models::WebhooksProjectCard, sender: models::SimpleUser) -> WebhookProjectCardConverted {
         WebhookProjectCardConverted {
             action,
             changes: Box::new(changes),

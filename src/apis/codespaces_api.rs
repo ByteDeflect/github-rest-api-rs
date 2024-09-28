@@ -1143,7 +1143,7 @@ pub async fn codespaces_slash_get_public_key_for_authenticated_user(configuratio
     }
 }
 
-/// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you can create or update secrets.  Anyone with read access to the repository can use this endpoint.  If the repository is private, OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+/// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you can create or update secrets.  If the repository is private, OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
 pub async fn codespaces_slash_get_repo_public_key(configuration: &configuration::Configuration, owner: &str, repo: &str) -> Result<models::CodespacesPublicKey, Error<CodespacesSlashGetRepoPublicKeyError>> {
     let local_var_configuration = configuration;
 

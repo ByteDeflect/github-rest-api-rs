@@ -24,6 +24,8 @@ pub struct ContentTree {
     pub path: String,
     #[serde(rename = "sha")]
     pub sha: String,
+    #[serde(rename = "content", skip_serializing_if = "Option::is_none")]
+    pub content: Option<String>,
     #[serde(rename = "url")]
     pub url: String,
     #[serde(rename = "git_url", deserialize_with = "Option::deserialize")]
@@ -47,6 +49,7 @@ impl ContentTree {
             name,
             path,
             sha,
+            content: None,
             url,
             git_url,
             html_url,

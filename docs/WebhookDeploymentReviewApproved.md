@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **organization** | [**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md) |  | 
 **repository** | [**models::RepositoryWebhooks**](repository-webhooks.md) |  | 
 **reviewers** | Option<[**Vec<models::WebhooksReviewersInner>**](webhooks_reviewers_inner.md)> |  | [optional]
-**sender** | [**models::SimpleUserWebhooks**](simple-user-webhooks.md) |  | 
+**sender** | [**models::SimpleUser**](simple-user.md) |  | 
 **since** | **String** |  | 
 **workflow_job_run** | Option<[**models::WebhooksWorkflowJobRun**](webhooks_workflow_job_run.md)> |  | [optional]
 **workflow_job_runs** | Option<[**Vec<models::WebhookDeploymentReviewApprovedWorkflowJobRunsInner>**](webhook_deployment_review_approved_workflow_job_runs_inner.md)> |  | [optional]

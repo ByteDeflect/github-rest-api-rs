@@ -41,7 +41,7 @@ pub struct WebhookStatus {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     /// The Commit SHA.
     #[serde(rename = "sha")]
     pub sha: String,
@@ -56,7 +56,7 @@ pub struct WebhookStatus {
 }
 
 impl WebhookStatus {
-    pub fn new(branches: Vec<models::WebhookStatusBranchesInner>, commit: models::WebhookStatusCommit, context: String, created_at: String, description: Option<String>, id: i32, name: String, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, sha: String, state: State, target_url: Option<String>, updated_at: String) -> WebhookStatus {
+    pub fn new(branches: Vec<models::WebhookStatusBranchesInner>, commit: models::WebhookStatusCommit, context: String, created_at: String, description: Option<String>, id: i32, name: String, repository: models::RepositoryWebhooks, sender: models::SimpleUser, sha: String, state: State, target_url: Option<String>, updated_at: String) -> WebhookStatus {
         WebhookStatus {
             avatar_url: None,
             branches,

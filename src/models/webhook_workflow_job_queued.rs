@@ -24,7 +24,7 @@ pub struct WebhookWorkflowJobQueued {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "workflow_job")]
     pub workflow_job: Box<models::WebhookWorkflowJobQueuedWorkflowJob>,
     #[serde(rename = "deployment", skip_serializing_if = "Option::is_none")]
@@ -32,7 +32,7 @@ pub struct WebhookWorkflowJobQueued {
 }
 
 impl WebhookWorkflowJobQueued {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, workflow_job: models::WebhookWorkflowJobQueuedWorkflowJob) -> WebhookWorkflowJobQueued {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser, workflow_job: models::WebhookWorkflowJobQueuedWorkflowJob) -> WebhookWorkflowJobQueued {
         WebhookWorkflowJobQueued {
             action,
             enterprise: None,

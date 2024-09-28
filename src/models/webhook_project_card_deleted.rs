@@ -26,11 +26,11 @@ pub struct WebhookProjectCardDeleted {
     #[serde(rename = "repository", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Option<Box<models::NullableRepositoryWebhooks>>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookProjectCardDeleted {
-    pub fn new(action: Action, project_card: models::ProjectCard, sender: models::SimpleUserWebhooks) -> WebhookProjectCardDeleted {
+    pub fn new(action: Action, project_card: models::ProjectCard, sender: models::SimpleUser) -> WebhookProjectCardDeleted {
         WebhookProjectCardDeleted {
             action,
             enterprise: None,

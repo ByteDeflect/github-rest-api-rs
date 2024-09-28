@@ -11,7 +11,7 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// WebhookCommitCommentCreatedComment : The [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment) resource.
+/// WebhookCommitCommentCreatedComment : The [commit comment](${externalDocsUpapp/api/description/components/schemas/webhooks/issue-comment-created.yamlrl}/rest/commits/comments#get-a-commit-comment) resource.
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct WebhookCommitCommentCreatedComment {
     /// How the author is associated with the repository.
@@ -53,7 +53,7 @@ pub struct WebhookCommitCommentCreatedComment {
 }
 
 impl WebhookCommitCommentCreatedComment {
-    /// The [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment) resource.
+    /// The [commit comment](${externalDocsUpapp/api/description/components/schemas/webhooks/issue-comment-created.yamlrl}/rest/commits/comments#get-a-commit-comment) resource.
     pub fn new(author_association: AuthorAssociation, body: String, commit_id: String, created_at: String, html_url: String, id: i32, line: Option<i32>, node_id: String, path: Option<String>, position: Option<i32>, updated_at: String, url: String, user: Option<models::User1>) -> WebhookCommitCommentCreatedComment {
         WebhookCommitCommentCreatedComment {
             author_association,

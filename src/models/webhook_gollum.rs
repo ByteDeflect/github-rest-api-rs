@@ -25,11 +25,11 @@ pub struct WebhookGollum {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookGollum {
-    pub fn new(pages: Vec<models::WebhookGollumPagesInner>, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookGollum {
+    pub fn new(pages: Vec<models::WebhookGollumPagesInner>, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookGollum {
         WebhookGollum {
             enterprise: None,
             installation: None,

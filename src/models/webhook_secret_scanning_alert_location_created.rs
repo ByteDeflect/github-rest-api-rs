@@ -26,11 +26,11 @@ pub struct WebhookSecretScanningAlertLocationCreated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookSecretScanningAlertLocationCreated {
-    pub fn new(alert: models::SecretScanningAlertWebhook, location: models::SecretScanningLocation, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookSecretScanningAlertLocationCreated {
+    pub fn new(alert: models::SecretScanningAlertWebhook, location: models::SecretScanningLocation, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookSecretScanningAlertLocationCreated {
         WebhookSecretScanningAlertLocationCreated {
             action: None,
             alert: Box::new(alert),

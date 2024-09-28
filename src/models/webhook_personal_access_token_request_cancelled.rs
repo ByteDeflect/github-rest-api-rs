@@ -22,13 +22,13 @@ pub struct WebhookPersonalAccessTokenRequestCancelled {
     #[serde(rename = "organization")]
     pub organization: Box<models::OrganizationSimpleWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "installation")]
     pub installation: Box<models::SimpleInstallation>,
 }
 
 impl WebhookPersonalAccessTokenRequestCancelled {
-    pub fn new(action: Action, personal_access_token_request: models::PersonalAccessTokenRequest, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUserWebhooks, installation: models::SimpleInstallation) -> WebhookPersonalAccessTokenRequestCancelled {
+    pub fn new(action: Action, personal_access_token_request: models::PersonalAccessTokenRequest, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUser, installation: models::SimpleInstallation) -> WebhookPersonalAccessTokenRequestCancelled {
         WebhookPersonalAccessTokenRequestCancelled {
             action,
             personal_access_token_request: Box::new(personal_access_token_request),

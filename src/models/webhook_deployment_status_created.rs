@@ -30,7 +30,7 @@ pub struct WebhookDeploymentStatusCreated {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "workflow", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub workflow: Option<Option<Box<models::WebhooksWorkflow>>>,
     #[serde(rename = "workflow_run", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
@@ -38,7 +38,7 @@ pub struct WebhookDeploymentStatusCreated {
 }
 
 impl WebhookDeploymentStatusCreated {
-    pub fn new(action: Action, deployment: models::Deployment1, deployment_status: models::WebhookDeploymentStatusCreatedDeploymentStatus, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookDeploymentStatusCreated {
+    pub fn new(action: Action, deployment: models::Deployment1, deployment_status: models::WebhookDeploymentStatusCreatedDeploymentStatus, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookDeploymentStatusCreated {
         WebhookDeploymentStatusCreated {
             action,
             check_run: None,

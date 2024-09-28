@@ -26,13 +26,13 @@ pub struct WebhookWorkflowDispatch {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "workflow")]
     pub workflow: String,
 }
 
 impl WebhookWorkflowDispatch {
-    pub fn new(inputs: Option<std::collections::HashMap<String, serde_json::Value>>, r#ref: String, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, workflow: String) -> WebhookWorkflowDispatch {
+    pub fn new(inputs: Option<std::collections::HashMap<String, serde_json::Value>>, r#ref: String, repository: models::RepositoryWebhooks, sender: models::SimpleUser, workflow: String) -> WebhookWorkflowDispatch {
         WebhookWorkflowDispatch {
             enterprise: None,
             inputs,

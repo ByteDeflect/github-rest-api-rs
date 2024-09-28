@@ -24,11 +24,11 @@ pub struct WebhookWatchStarted {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookWatchStarted {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookWatchStarted {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookWatchStarted {
         WebhookWatchStarted {
             action,
             enterprise: None,

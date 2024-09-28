@@ -28,11 +28,11 @@ pub struct WebhookRepositoryRulesetEdited {
     #[serde(rename = "changes", skip_serializing_if = "Option::is_none")]
     pub changes: Option<Box<models::WebhookRepositoryRulesetEditedChanges>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookRepositoryRulesetEdited {
-    pub fn new(action: Action, repository_ruleset: models::RepositoryRuleset, sender: models::SimpleUserWebhooks) -> WebhookRepositoryRulesetEdited {
+    pub fn new(action: Action, repository_ruleset: models::RepositoryRuleset, sender: models::SimpleUser) -> WebhookRepositoryRulesetEdited {
         WebhookRepositoryRulesetEdited {
             action,
             enterprise: None,

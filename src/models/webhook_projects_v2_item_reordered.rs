@@ -24,11 +24,11 @@ pub struct WebhookProjectsV2ItemReordered {
     #[serde(rename = "projects_v2_item")]
     pub projects_v2_item: Box<models::ProjectsV2Item>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookProjectsV2ItemReordered {
-    pub fn new(action: Action, changes: models::WebhookProjectsV2ItemReorderedChanges, organization: models::OrganizationSimpleWebhooks, projects_v2_item: models::ProjectsV2Item, sender: models::SimpleUserWebhooks) -> WebhookProjectsV2ItemReordered {
+    pub fn new(action: Action, changes: models::WebhookProjectsV2ItemReorderedChanges, organization: models::OrganizationSimpleWebhooks, projects_v2_item: models::ProjectsV2Item, sender: models::SimpleUser) -> WebhookProjectsV2ItemReordered {
         WebhookProjectsV2ItemReordered {
             action,
             changes: Box::new(changes),

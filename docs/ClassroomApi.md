@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**classroom_slash_get_a_classroom**](ClassroomApi.md#classroom_slash_get_a_classroom) | **GET** /classrooms/{classroom_id} | Get a classroom
 [**classroom_slash_get_an_assignment**](ClassroomApi.md#classroom_slash_get_an_assignment) | **GET** /assignments/{assignment_id} | Get an assignment
 [**classroom_slash_get_assignment_grades**](ClassroomApi.md#classroom_slash_get_assignment_grades) | **GET** /assignments/{assignment_id}/grades | Get assignment grades
-[**classroom_slash_list_accepted_assigments_for_an_assignment**](ClassroomApi.md#classroom_slash_list_accepted_assigments_for_an_assignment) | **GET** /assignments/{assignment_id}/accepted_assignments | List accepted assignments for an assignment
+[**classroom_slash_list_accepted_assignments_for_an_assignment**](ClassroomApi.md#classroom_slash_list_accepted_assignments_for_an_assignment) | **GET** /assignments/{assignment_id}/accepted_assignments | List accepted assignments for an assignment
 [**classroom_slash_list_assignments_for_a_classroom**](ClassroomApi.md#classroom_slash_list_assignments_for_a_classroom) | **GET** /classrooms/{classroom_id}/assignments | List assignments for a classroom
 [**classroom_slash_list_classrooms**](ClassroomApi.md#classroom_slash_list_classrooms) | **GET** /classrooms | List classrooms
 
@@ -103,9 +103,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## classroom_slash_list_accepted_assigments_for_an_assignment
+## classroom_slash_list_accepted_assignments_for_an_assignment
 
-> Vec<models::ClassroomAcceptedAssignment> classroom_slash_list_accepted_assigments_for_an_assignment(assignment_id, page, per_page)
+> Vec<models::ClassroomAcceptedAssignment> classroom_slash_list_accepted_assignments_for_an_assignment(assignment_id, page, per_page)
 List accepted assignments for an assignment
 
 Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.

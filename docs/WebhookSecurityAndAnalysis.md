@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **installation** | Option<[**models::SimpleInstallation**](simple-installation.md)> |  | [optional]
 **organization** | Option<[**models::OrganizationSimpleWebhooks**](organization-simple-webhooks.md)> |  | [optional]
 **repository** | [**models::FullRepository**](full-repository.md) |  | 
-**sender** | Option<[**models::SimpleUserWebhooks**](simple-user-webhooks.md)> |  | [optional]
+**sender** | Option<[**models::SimpleUser**](simple-user.md)> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

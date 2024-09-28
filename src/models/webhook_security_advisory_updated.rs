@@ -26,7 +26,7 @@ pub struct WebhookSecurityAdvisoryUpdated {
     #[serde(rename = "security_advisory")]
     pub security_advisory: Box<models::WebhooksSecurityAdvisory>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
 }
 
 impl WebhookSecurityAdvisoryUpdated {

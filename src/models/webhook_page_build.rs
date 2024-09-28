@@ -26,11 +26,11 @@ pub struct WebhookPageBuild {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookPageBuild {
-    pub fn new(build: models::WebhookPageBuildBuild, id: i32, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookPageBuild {
+    pub fn new(build: models::WebhookPageBuildBuild, id: i32, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookPageBuild {
         WebhookPageBuild {
             build: Box::new(build),
             enterprise: None,

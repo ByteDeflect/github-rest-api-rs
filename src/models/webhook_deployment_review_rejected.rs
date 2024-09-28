@@ -30,7 +30,7 @@ pub struct WebhookDeploymentReviewRejected {
     #[serde(rename = "reviewers", skip_serializing_if = "Option::is_none")]
     pub reviewers: Option<Vec<models::WebhooksReviewersInner>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
     #[serde(rename = "since")]
     pub since: String,
     #[serde(rename = "workflow_job_run", skip_serializing_if = "Option::is_none")]
@@ -42,7 +42,7 @@ pub struct WebhookDeploymentReviewRejected {
 }
 
 impl WebhookDeploymentReviewRejected {
-    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks, since: String, workflow_run: Option<models::DeploymentWorkflowRun2>) -> WebhookDeploymentReviewRejected {
+    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, repository: models::RepositoryWebhooks, sender: models::SimpleUser, since: String, workflow_run: Option<models::DeploymentWorkflowRun2>) -> WebhookDeploymentReviewRejected {
         WebhookDeploymentReviewRejected {
             action,
             approver: None,

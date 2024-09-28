@@ -34,11 +34,11 @@ pub struct WebhookInstallationRepositoriesAdded {
     #[serde(rename = "requester", deserialize_with = "Option::deserialize")]
     pub requester: Option<Box<models::WebhooksUser>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookInstallationRepositoriesAdded {
-    pub fn new(action: Action, installation: models::Installation, repositories_added: Vec<models::WebhooksRepositoriesInner>, repositories_removed: Vec<models::WebhookInstallationRepositoriesAddedRepositoriesRemovedInner>, repository_selection: models::WebhooksRepositorySelection, requester: Option<models::WebhooksUser>, sender: models::SimpleUserWebhooks) -> WebhookInstallationRepositoriesAdded {
+    pub fn new(action: Action, installation: models::Installation, repositories_added: Vec<models::WebhooksRepositoriesInner>, repositories_removed: Vec<models::WebhookInstallationRepositoriesAddedRepositoriesRemovedInner>, repository_selection: models::WebhooksRepositorySelection, requester: Option<models::WebhooksUser>, sender: models::SimpleUser) -> WebhookInstallationRepositoriesAdded {
         WebhookInstallationRepositoriesAdded {
             action,
             enterprise: None,

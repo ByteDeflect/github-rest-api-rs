@@ -37,11 +37,11 @@ pub struct WebhookCreate {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookCreate {
-    pub fn new(description: Option<String>, master_branch: String, pusher_type: String, r#ref: String, ref_type: RefType, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookCreate {
+    pub fn new(description: Option<String>, master_branch: String, pusher_type: String, r#ref: String, ref_type: RefType, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookCreate {
         WebhookCreate {
             description,
             enterprise: None,

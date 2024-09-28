@@ -28,11 +28,11 @@ pub struct WebhookLabelEdited {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookLabelEdited {
-    pub fn new(action: Action, label: models::WebhooksLabel, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookLabelEdited {
+    pub fn new(action: Action, label: models::WebhooksLabel, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookLabelEdited {
         WebhookLabelEdited {
             action,
             changes: None,

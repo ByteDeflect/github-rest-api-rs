@@ -24,11 +24,11 @@ pub struct WebhookBranchProtectionConfigurationEnabled {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookBranchProtectionConfigurationEnabled {
-    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookBranchProtectionConfigurationEnabled {
+    pub fn new(action: Action, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookBranchProtectionConfigurationEnabled {
         WebhookBranchProtectionConfigurationEnabled {
             action,
             enterprise: None,

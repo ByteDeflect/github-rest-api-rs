@@ -39,10 +39,10 @@ pub enum ClassroomSlashGetAssignmentGradesError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`classroom_slash_list_accepted_assigments_for_an_assignment`]
+/// struct for typed errors of method [`classroom_slash_list_accepted_assignments_for_an_assignment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum ClassroomSlashListAcceptedAssigmentsForAnAssignmentError {
+pub enum ClassroomSlashListAcceptedAssignmentsForAnAssignmentError {
     UnknownValue(serde_json::Value),
 }
 
@@ -146,7 +146,7 @@ pub async fn classroom_slash_get_assignment_grades(configuration: &configuration
 }
 
 /// Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
-pub async fn classroom_slash_list_accepted_assigments_for_an_assignment(configuration: &configuration::Configuration, assignment_id: i32, page: Option<i32>, per_page: Option<i32>) -> Result<Vec<models::ClassroomAcceptedAssignment>, Error<ClassroomSlashListAcceptedAssigmentsForAnAssignmentError>> {
+pub async fn classroom_slash_list_accepted_assignments_for_an_assignment(configuration: &configuration::Configuration, assignment_id: i32, page: Option<i32>, per_page: Option<i32>) -> Result<Vec<models::ClassroomAcceptedAssignment>, Error<ClassroomSlashListAcceptedAssignmentsForAnAssignmentError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -173,7 +173,7 @@ pub async fn classroom_slash_list_accepted_assigments_for_an_assignment(configur
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<ClassroomSlashListAcceptedAssigmentsForAnAssignmentError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ClassroomSlashListAcceptedAssignmentsForAnAssignmentError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

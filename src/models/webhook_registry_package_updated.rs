@@ -26,11 +26,11 @@ pub struct WebhookRegistryPackageUpdated {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookRegistryPackageUpdated {
-    pub fn new(action: Action, registry_package: models::WebhookRegistryPackageUpdatedRegistryPackage, sender: models::SimpleUserWebhooks) -> WebhookRegistryPackageUpdated {
+    pub fn new(action: Action, registry_package: models::WebhookRegistryPackageUpdatedRegistryPackage, sender: models::SimpleUser) -> WebhookRegistryPackageUpdated {
         WebhookRegistryPackageUpdated {
             action,
             enterprise: None,

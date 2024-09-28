@@ -26,11 +26,11 @@ pub struct WebhookDependabotAlertDismissed {
     #[serde(rename = "repository")]
     pub repository: Box<models::RepositoryWebhooks>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookDependabotAlertDismissed {
-    pub fn new(action: Action, alert: models::DependabotAlert, repository: models::RepositoryWebhooks, sender: models::SimpleUserWebhooks) -> WebhookDependabotAlertDismissed {
+    pub fn new(action: Action, alert: models::DependabotAlert, repository: models::RepositoryWebhooks, sender: models::SimpleUser) -> WebhookDependabotAlertDismissed {
         WebhookDependabotAlertDismissed {
             action,
             alert: Box::new(alert),

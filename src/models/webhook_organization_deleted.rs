@@ -26,11 +26,11 @@ pub struct WebhookOrganizationDeleted {
     #[serde(rename = "repository", skip_serializing_if = "Option::is_none")]
     pub repository: Option<Box<models::RepositoryWebhooks>>,
     #[serde(rename = "sender")]
-    pub sender: Box<models::SimpleUserWebhooks>,
+    pub sender: Box<models::SimpleUser>,
 }
 
 impl WebhookOrganizationDeleted {
-    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUserWebhooks) -> WebhookOrganizationDeleted {
+    pub fn new(action: Action, organization: models::OrganizationSimpleWebhooks, sender: models::SimpleUser) -> WebhookOrganizationDeleted {
         WebhookOrganizationDeleted {
             action,
             enterprise: None,

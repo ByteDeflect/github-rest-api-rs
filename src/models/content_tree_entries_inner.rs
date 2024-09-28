@@ -21,8 +21,6 @@ pub struct ContentTreeEntriesInner {
     pub name: String,
     #[serde(rename = "path")]
     pub path: String,
-    #[serde(rename = "content", skip_serializing_if = "Option::is_none")]
-    pub content: Option<String>,
     #[serde(rename = "sha")]
     pub sha: String,
     #[serde(rename = "url")]
@@ -44,7 +42,6 @@ impl ContentTreeEntriesInner {
             size,
             name,
             path,
-            content: None,
             sha,
             url,
             git_url,

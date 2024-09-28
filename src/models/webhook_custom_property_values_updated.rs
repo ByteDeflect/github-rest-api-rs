@@ -24,7 +24,7 @@ pub struct WebhookCustomPropertyValuesUpdated {
     #[serde(rename = "organization")]
     pub organization: Box<models::OrganizationSimpleWebhooks>,
     #[serde(rename = "sender", skip_serializing_if = "Option::is_none")]
-    pub sender: Option<Box<models::SimpleUserWebhooks>>,
+    pub sender: Option<Box<models::SimpleUser>>,
     /// The new custom property values for the repository.
     #[serde(rename = "new_property_values")]
     pub new_property_values: Vec<models::CustomPropertyValue>,

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **path** | **String** |  | 
 **sha** | **String** |  | 
+**content** | Option<**String**> |  | [optional]
 **url** | **String** |  | 
 **git_url** | Option<**String**> |  | 
 **html_url** | Option<**String**> |  | 

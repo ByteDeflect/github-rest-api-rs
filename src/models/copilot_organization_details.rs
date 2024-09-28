@@ -11,7 +11,7 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// CopilotOrganizationDetails : Information about the seat breakdown and policies set for an organization with a Copilot Business subscription.
+/// CopilotOrganizationDetails : Information about the seat breakdown and policies set for an organization with a Copilot Business or Copilot Enterprise subscription.
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CopilotOrganizationDetails {
     #[serde(rename = "seat_breakdown")]
@@ -34,7 +34,7 @@ pub struct CopilotOrganizationDetails {
 }
 
 impl CopilotOrganizationDetails {
-    /// Information about the seat breakdown and policies set for an organization with a Copilot Business subscription.
+    /// Information about the seat breakdown and policies set for an organization with a Copilot Business or Copilot Enterprise subscription.
     pub fn new(seat_breakdown: models::CopilotSeatBreakdown, public_code_suggestions: PublicCodeSuggestions, seat_management_setting: SeatManagementSetting) -> CopilotOrganizationDetails {
         CopilotOrganizationDetails {
             seat_breakdown: Box::new(seat_breakdown),
